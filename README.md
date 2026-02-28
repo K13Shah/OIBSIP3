@@ -22,6 +22,15 @@ To demonstrate a SQL Injection vulnerability using DVWA (Damn Vulnerable Web App
 ## SQL Injection Performed
 1' OR '1'='1
 
+## Result
+The injection successfully bypassed input validation and displayed all user records from the database, confirming the presence of a SQL Injection vulnerability.
+
+## Conclusion
+This project demonstrates how improper input validation can allow attackers to manipulate SQL queries and access sensitive data. It highlights the importance of secure coding practices such as using prepared statements, parameterized queries, and proper input sanitization to prevent SQL Injection attacks.
+
+## Author
+Krisha Shah  
+
 ## How It Works
 Backend query (Low security mode):
 ```sql
@@ -30,14 +39,3 @@ SELECT * FROM users WHERE user_id = '$id';
 **Target:** DVWA → SQL Injection page  
 **Payload Used:**
 SELECT * FROM users WHERE user_id = '1' OR '1'='1';
-
-## Result
-Successfully retrieved all user records.
-Confirmed SQL Injection vulnerability.
-Demonstrated lack of input validation.
-
-##Conclusion
-This project demonstrates how improper input handling can lead to SQL Injection. Secure coding practices such as prepared statements and input validation are necessary to prevent such attacks.
-
-##Author
-Krisha Shah
